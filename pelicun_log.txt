@@ -1,0 +1,230 @@
+
+pelicun 3.1 | 
+
+System Information:
+         local time zone: 中国标准时间
+         start time: 2024-04-27T09:27:44
+         python: 3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)]
+         numpy: 1.26.4
+         pandas: 2.1.4
+         
+         --------------------------------------------------------------------------------
+09:27:44 Assessement Started
+         --------------------------------------------------------------------------------
+09:27:44 Loading demand data...
+         Removing event_ID from header...
+         Removing whitespace from header...
+         Demand data successfully parsed.
+         Removing event_ID from header...
+         Removing whitespace from header...
+         Demand units successfully parsed.
+         --------------------------------------------------------------------------------
+09:27:44 Calibrating demand model...
+         WARNING: Could not parse  provided as TruncateLower. Using NaN instead.
+         WARNING: Could not parse  provided as TruncateUpper. Using NaN instead.
+         
+         Calibration settings successfully parsed:
+                             Family  CensorLower  CensorUpper  TruncateLower  TruncateUpper  SigIncrease  Theta_0  Theta_1
+         type    loc dir                                                                                                  
+         PFA     0   1    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+                     2    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+                 1   1    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+                     2    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+                 2   1    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+                     2    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+                 3   1    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+                     2    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+         PID     1   1    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+                     2    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+                 2   1    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+                     2    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+                 3   1    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+                     2    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+         RID     1   1    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+         SA_1.13 0   1    lognormal          NaN          NaN            NaN            NaN          NaN      NaN      NaN
+         
+         Demand data used for calibration:
+         type     PFA                                                             PID                                                         RID SA_1.13
+         loc        0              1               2               3                1                   2                   3                   1       0
+         dir        1      2       1       2       1       2       1      2         1         2         1         2         1         2         1       1
+         0      6.664  2.842   8.918   4.998   7.350   4.116   7.252  5.586  0.036131  0.016667  0.057754  0.026087  0.063986  0.027536  0.007304  8.4378
+         1     10.192  8.134   9.898  14.504   8.134  12.838   8.428  9.212  0.052321  0.024405  0.075362  0.031449  0.072609  0.039855  0.008580  8.4378
+         2      5.880  5.488  10.682   9.408   8.820  10.094   8.036  6.664  0.017381  0.022976  0.022391  0.031522  0.025290  0.037391  0.003348  8.4378
+         3      4.704  4.410   6.468   4.508   6.860   4.508   9.898  7.056  0.033512  0.037083  0.047174  0.060435  0.047899  0.063913  0.005841  8.4378
+         4     11.858  7.252  17.836  10.388  11.760   8.134  11.074  9.114  0.013095  0.022917  0.033986  0.036304  0.041087  0.041232  0.004964  8.4378
+         5      5.390  5.096   5.096   5.978   6.076   4.998   4.704  5.194  0.042024  0.020476  0.059783  0.032101  0.056884  0.031232  0.008159  8.4378
+         6      7.742  5.292   8.428   5.390   7.840   4.704   6.566  5.194  0.023631  0.026667  0.042609  0.040000  0.042609  0.038043  0.004927  8.4378
+         7      9.016  8.918   8.134  11.270   6.174   8.820   6.664  6.958  0.034464  0.061429  0.050290  0.087391  0.049130  0.084420  0.005616  8.4378
+         8      7.938  6.566   9.800  12.936   8.722  10.290   8.232  8.428  0.014345  0.016905  0.029348  0.023406  0.034565  0.029710  0.003826  8.4378
+         9      8.428  7.154  18.032   9.114  13.034   6.272   9.408  7.154  0.011607  0.019226  0.021232  0.037754  0.027391  0.046739  0.003044  8.4378
+         10     6.860  4.116   9.800   5.978  11.270   6.664   8.722  6.468  0.018095  0.012440  0.020507  0.024130  0.023333  0.030290  0.002558  8.4378
+         
+         Fitting the prescribed joint demand distribution...
+         
+         Calibration successful, processing results...
+         
+         Calibrated demand model marginal distributions:
+                             Family   Theta_0       Theta_1  TruncateLower  TruncateUpper
+         type    loc dir                                                                 
+         PFA     0   1    lognormal  7.436518  2.633259e-01            NaN            NaN
+                     2    lognormal  5.653724  3.207066e-01            NaN            NaN
+                 1   1    lognormal  9.626775  3.568906e-01            NaN            NaN
+                     2    lognormal  7.963978  3.919285e-01            NaN            NaN
+                 2   1    lognormal  8.466795  2.449584e-01            NaN            NaN
+                     2    lognormal  6.920646  3.675941e-01            NaN            NaN
+                 3   1    lognormal  7.900493  2.237420e-01            NaN            NaN
+                     2    lognormal  6.872107  1.940062e-01            NaN            NaN
+         PID     1   1    lognormal  0.023949  4.931006e-01            NaN            NaN
+                     2    lognormal  0.023258  4.088959e-01            NaN            NaN
+                 2   1    lognormal  0.038241  4.333394e-01            NaN            NaN
+                     2    lognormal  0.036102  3.773663e-01            NaN            NaN
+                 3   1    lognormal  0.041375  3.608698e-01            NaN            NaN
+                     2    lognormal  0.040307  3.269036e-01            NaN            NaN
+         RID     1   1    lognormal  0.004920  3.859179e-01            NaN            NaN
+         SA_1.13 0   1    lognormal  8.437800  4.440892e-16            NaN            NaN
+         
+         Calibrated demand model correlation matrix:
+         type                      PFA                                                                                                             PID                                                                                 RID       SA_1.13
+         loc                         0                           1                           2                           3                           1                           2                           3                           1             0
+         dir                         1             2             1             2             1             2             1             2             1             2             1             2             1             2             1             1
+         type    loc dir                                                                                                                                                                                                                                
+         PFA     0   1    1.000000e+00  6.570881e-01  6.846727e-01  7.053130e-01  4.491469e-01  5.516246e-01  3.445701e-01  6.164745e-01 -2.604234e-01  6.201526e-02  1.257884e-02  1.159396e-02  8.554353e-02  1.047241e-01 -1.170311e-02  9.879075e-16
+                     2    6.570881e-01  1.000000e+00  3.611682e-01  8.319570e-01  1.462464e-01  7.215285e-01  1.448646e-01  6.227722e-01 -1.567184e-01  4.716934e-01 -7.464556e-03  4.000989e-01 -1.385063e-02  5.189545e-01 -2.486202e-02  8.973513e-17
+                 1   1    6.846727e-01  3.611682e-01  1.000000e+00  4.704510e-01  8.850706e-01  3.661576e-01  7.103112e-01  5.585562e-01 -7.412537e-01 -2.530561e-01 -5.610408e-01 -1.817517e-01 -4.511070e-01 -1.602130e-02 -5.144538e-01  1.276835e-15
+                     2    7.053130e-01  8.319570e-01  4.704510e-01  1.000000e+00  2.479422e-01  9.342283e-01  2.279904e-01  7.685329e-01 -1.993237e-01  1.316545e-01 -6.941852e-02 -2.068985e-02 -3.526530e-02  1.478046e-01 -6.554022e-02 -2.100419e-16
+                 2   1    4.491469e-01  1.462464e-01  8.850706e-01  2.479422e-01  1.000000e+00  2.292300e-01  6.943391e-01  4.210079e-01 -8.128476e-01 -5.480680e-01 -7.479280e-01 -4.106219e-01 -6.650585e-01 -2.379057e-01 -7.102737e-01 -1.802987e-16
+                     2    5.516246e-01  7.215285e-01  3.661576e-01  9.342283e-01  2.292300e-01  1.000000e+00  2.686914e-01  7.558443e-01 -1.526422e-01  8.222771e-02 -1.429128e-01 -8.887863e-02 -1.446801e-01  9.728207e-02 -1.538257e-01 -1.229036e-17
+                 3   1    3.445701e-01  1.448646e-01  7.103112e-01  2.279904e-01  6.943391e-01  2.686914e-01  1.000000e+00  7.156763e-01 -5.311594e-01 -1.005706e-01 -4.375579e-01 -2.559062e-02 -3.541514e-01  1.794588e-01 -4.283034e-01  3.792918e-16
+                     2    6.164745e-01  6.227722e-01  5.585562e-01  7.685329e-01  4.210079e-01  7.558443e-01  7.156763e-01  1.000000e+00 -2.602139e-01  7.594329e-02 -9.712082e-02 -1.022364e-03 -2.894060e-02  2.212187e-01 -8.675598e-02 -1.026153e-16
+         PID     1   1   -2.604234e-01 -1.567184e-01 -7.412537e-01 -1.993237e-01 -8.128476e-01 -1.526422e-01 -5.311594e-01 -2.602139e-01  1.000000e+00  3.728809e-01  8.930144e-01  2.583287e-01  8.289706e-01  1.440180e-01  8.433966e-01  2.161086e-16
+                     2    6.201526e-02  4.716934e-01 -2.530561e-01  1.316545e-01 -5.480680e-01  8.222771e-02 -1.005706e-01  7.594329e-02  3.728809e-01  1.000000e+00  4.164809e-01  9.503078e-01  3.578559e-01  9.062887e-01  3.599956e-01 -1.781707e-15
+                 2   1    1.257884e-02 -7.464556e-03 -5.610408e-01 -6.941852e-02 -7.479280e-01 -1.429128e-01 -4.375579e-01 -9.712082e-02  8.930144e-01  4.164809e-01  1.000000e+00  2.739236e-01  9.859714e-01  1.434136e-01  9.786976e-01 -3.120836e-16
+                     2    1.159396e-02  4.000989e-01 -1.817517e-01 -2.068985e-02 -4.106219e-01 -8.887863e-02 -2.559062e-02 -1.022364e-03  2.583287e-01  9.503078e-01  2.739236e-01  1.000000e+00  2.207456e-01  9.614704e-01  2.148817e-01 -8.014367e-16
+                 3   1    8.554353e-02 -1.385063e-02 -4.511070e-01 -3.526530e-02 -6.650585e-01 -1.446801e-01 -3.541514e-01 -2.894060e-02  8.289706e-01  3.578559e-01  9.859714e-01  2.207456e-01  1.000000e+00  1.027904e-01  9.800797e-01 -8.308696e-17
+                     2    1.047241e-01  5.189545e-01 -1.602130e-02  1.478046e-01 -2.379057e-01  9.728207e-02  1.794588e-01  2.212187e-01  1.440180e-01  9.062887e-01  1.434136e-01  9.614704e-01  1.027904e-01  1.000000e+00  8.106601e-02 -1.303153e-15
+         RID     1   1   -1.170311e-02 -2.486202e-02 -5.144538e-01 -6.554022e-02 -7.102737e-01 -1.538257e-01 -4.283034e-01 -8.675598e-02  8.433966e-01  3.599956e-01  9.786976e-01  2.148817e-01  9.800797e-01  8.106601e-02  1.000000e+00  2.703030e-15
+         SA_1.13 0   1    9.879075e-16  8.973513e-17  1.276835e-15 -2.100419e-16 -1.802987e-16 -1.229036e-17  3.792918e-16 -1.026153e-16  2.161086e-16 -1.781707e-15 -3.120836e-16 -8.014367e-16 -8.308696e-17 -1.303153e-15  2.703030e-15  1.000000e+00
+         --------------------------------------------------------------------------------
+09:27:45 Generating sample from demand variables...
+         
+         16 random variables created.
+         
+         Correlations between 16 random variables successfully defined.
+         
+         Successfully generated 500 realizations.
+         --------------------------------------------------------------------------------
+         --------------------------------------------------------------------------------
+09:27:45 Loading demand data...
+         Removing whitespace from header...
+         Demand data successfully parsed.
+         Removing whitespace from header...
+         Demand units successfully parsed.
+         --------------------------------------------------------------------------------
+         --------------------------------------------------------------------------------
+09:27:45 Loading component model...
+         
+         Parsing model file to characterize each component block
+         Model parameters successfully parsed. 63 performance groups identified
+         Converting model parameters to internal units...
+         Model parameters successfully loaded.
+         
+         Component model marginal distributions:
+                              Units  Theta_0  Blocks
+         cmp          loc dir                       
+         B.10.35.001  1   1      ea     12.0    12.0
+                          2      ea     12.0    12.0
+                      2   1      ea     12.0    12.0
+                          2      ea     12.0    12.0
+                      3   1      ea     12.0    12.0
+         ...                    ...      ...     ...
+         D.40.11.053a 2   0      ea    200.0     2.0
+                      3   0      ea    200.0     2.0
+         collapse     0   1      ea      1.0     1.0
+         excessiveRID 1   1      ea      1.0     1.0
+         irreparable  0   1      ea      1.0     1.0
+         
+         [63 rows x 3 columns]
+         --------------------------------------------------------------------------------
+09:27:45 Generating sample from component quantity variables...
+         
+         63 random variables created.
+         
+         Successfully generated 500 realizations.
+         --------------------------------------------------------------------------------
+         --------------------------------------------------------------------------------
+09:27:45 Loading damage model...
+         Damage model parameters successfully parsed.
+         --------------------------------------------------------------------------------
+09:27:46 Calculating damages...
+         Number of Performance Groups in Asset Model: 63
+         Number of Component Blocks: 2054
+         3 batches of Performance Groups prepared for damage assessment
+09:27:46 Calculating damage for PG batch 1 with 887 blocks
+09:27:46 Generating capacity variables ...
+         2x1553 random variables created.
+09:27:46 Sampling capacities...
+09:27:46 Raw samples are available
+09:27:46 Successfully generated 500 realizations.
+09:27:46 Collecting required demand information...
+09:27:46 Assembling demand data for calculation...
+09:27:46 Evaluating damage states...
+09:27:47 Calculating damage quantities...
+09:27:47 Calculating damage for PG batch 2 with 903 blocks
+09:27:47 Generating capacity variables ...
+         2x1395 random variables created.
+09:27:47 Sampling capacities...
+09:27:47 Raw samples are available
+09:27:47 Successfully generated 500 realizations.
+09:27:47 Collecting required demand information...
+09:27:47 Assembling demand data for calculation...
+09:27:47 Evaluating damage states...
+09:27:48 Calculating damage quantities...
+09:27:48 Calculating damage for PG batch 3 with 264 blocks
+09:27:48 Generating capacity variables ...
+         2x550 random variables created.
+09:27:48 Sampling capacities...
+09:27:48 Raw samples are available
+09:27:48 Successfully generated 500 realizations.
+09:27:48 Collecting required demand information...
+09:27:48 Assembling demand data for calculation...
+09:27:48 Evaluating damage states...
+09:27:48 Calculating damage quantities...
+         Raw damage calculation successful.
+09:27:48 Applying damage processes...
+09:27:48 Applying task...
+         Damage process task successfully applied.
+09:27:48 Applying task...
+         Damage process task successfully applied.
+         Damage processes successfully applied.
+09:27:48 Damage calculation successfully completed.
+         --------------------------------------------------------------------------------
+09:27:48 Saving damage sample...
+         --------------------------------------------------------------------------------
+09:27:49 Saving damage sample...
+         --------------------------------------------------------------------------------
+09:27:49 Loading loss map for BldgRepair...
+         Loss map successfully parsed.
+         --------------------------------------------------------------------------------
+09:27:49 Loading loss parameters for BldgRepair...
+         Loss parameters successfully parsed.
+         --------------------------------------------------------------------------------
+09:27:52 Calculating losses...
+         
+         Aggregating damage quantities...
+         Successfully aggregated damage quantities.
+         
+         Calculating the median repair consequences...
+         Successfully determined median repair consequences.
+09:27:52 
+         Considering deviations from the median values to obtain random DV sample...
+         Preparing random variables for repair cost and time...
+         
+         280 random variables created.
+         
+         Successfully generated 500 realizations of deviation from the median consequences.
+         Successfully obtained DV sample.
+09:27:53 Loss calculation successful.
+         --------------------------------------------------------------------------------
+09:27:53 Aggregating repair consequences...
+09:27:53 Repair consequences successfully aggregated.
+         --------------------------------------------------------------------------------
